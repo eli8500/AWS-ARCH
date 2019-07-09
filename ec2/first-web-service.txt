@@ -1,0 +1,6 @@
+#connect to instance
+yum update -y
+yum install httpd -y
+service httpd start
+cd /var/www/html
+echo "<html><body><h1>Hello</h1><h2>I am first web server</h2></body></html>" > index.html

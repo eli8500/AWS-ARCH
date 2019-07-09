@@ -1,0 +1,31 @@
+chmod 400 PRIVATE.pem
+ssh ec2-user@PRIVATEIP -i PRIVATE.pem
+
+#update all latest security
+sudo yum update -y
+
+#add cardential of user (.csv that has PUBLICKEY,SECRETKEY)
+aws configure
+#Enter PUBLICKEY,SECRETKEY
+#set right region
+#set empty format
+
+aws s3 mb s3://NEWBUCKETNAME
+
+#check existanse
+aws s3 ls
+
+
+
+#create file
+echo "hello" >> hello.txt
+ls -la
+#upload
+aws cp hello.txt se://BUCKETNAME
+
+#credentials
+sudo vim ~/.aws/credentials
+
+
+#SECURITY ROLE
+#after add new role and attach iam role to ec2 go into ec2 instance and delete ~/.aws so no credentials
