@@ -4,4 +4,4 @@ yum install httpd -y
 service httpd start
 chkconfig on
 cd /var/www/html
-echo "<html><body><h1>Hello</h1><h2>I am second web server</h2></body></html>" > index.html
+echo "<html><body><h1>Hello Cloud Gurus, This Is WebServer 2</h1></body></html>" > index.html
